@@ -308,7 +308,7 @@
     };
 
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i, len);
+      var _ret = _loop(i);
 
       if (_ret === "continue") continue;
     }
@@ -391,8 +391,7 @@
     SHOW: 'show'
   };
   var Selector = {
-    TOOLTIP_INNER: '.tooltip-inner',
-    TOOLTIP_ARROW: '.tooltip-arrow'
+    TOOLTIP_INNER: '.tooltip-inner'
   };
   var Trigger = {
     HOVER: 'hover',
@@ -557,7 +556,7 @@
               behavior: this.config.fallbackPlacement
             },
             arrow: {
-              element: Selector.TOOLTIP_ARROW
+              element: "." + this.constructor.NAME + "-arrow"
             },
             preventOverflow: {
               boundariesElement: this.config.boundary
